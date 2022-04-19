@@ -7,7 +7,12 @@ You can load the index by:
 from semir.ir import InvertedIndex
 idx = InvertedIndex('/path/docs-freqs-ngram=2-tokenizer=spacy-filter=all.npz')
 #### Data base:
-
+We used the Following .db file to store the corpus:  [Coming soon]()
+You can connect to the .db file using sqlite:
+```python
+import sqlite3
+con_doc = sqlite3.connect('/path/docs.db')
+cursor_doc = con_doc.cursor()
 ```
 ## Data Generation
 You can use the `longestSubSequenceFinder_weighted(bigList , smallList , idx)` function in alignment.py to extract the question frozen phrase by aligning the quesiton to its answer document: (You should tokenize the question and the document first. we use spacy tokenization)
