@@ -36,7 +36,7 @@ import pickle as pkl
 import alignment as alig
 with open('v1.0-simplified_simplified-nq-train.jsonl' , 'r') as f: #reading the lines of the NQ training set
     lines = f.readlines() 
-train_data = alig.convertDataSetLinesToTraingData(lines) 
+train_data = alig.convertDataSetLinesToTraingData(lines, idx) 
 with open('LCS_training_data.pickle' , 'wb') as f:
     pkl.dump(train_data , f)
 ```
@@ -52,7 +52,7 @@ with open('orig_dev_converted_hasAnswerer.jsonl' , 'r') as f:
 with open('dev_q_title_dict.pickle' , 'rb') as f: #ref [2]
     q_title_dict = pkl.load(f)
     
-dev_data = convertDataSetLinesToTraingData(lines , cursor_doc=cursor_doc , q_title_dict=q_title_dict)
+dev_data = convertDataSetLinesToTraingData(lines, idx, cursor_doc=cursor_doc , q_title_dict=q_title_dict)
 with open('LCS_development_data.pickle' , 'wb') as f:
     pkl.dump(dev_data , f)
 ```
