@@ -32,6 +32,7 @@ training set: `LCS_training_data.pickle`
 evaluation set: `LCS_validation_data.pickle`
 You can simply use the `convertDataSetLinesToTraingData` function in alignment.py and pass it the lines of the jsonl file in a list:
 ```python
+import pickle as pkl
 import alignment as alig
 with open('v1.0-simplified_simplified-nq-train.jsonl' , 'r') as f: #reading the lines of the NQ training set
     lines = f.readlines() 
@@ -45,6 +46,7 @@ We used the [NQ-open development set](https://huggingface.co/datasets/nq_open) t
 We have created a dictionary object (`dev_q_title_dict.pickle`) that map our devset questions to their answer document title.
 You can generate the develpment set by:
 ```python
+import pickle as pkl
 with open('orig_dev_converted_hasAnswerer.jsonl' , 'r') as f:
     lines = f.readlines()
 with open('dev_q_title_dict.pickle' , 'rb') as f: #ref [2]
