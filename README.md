@@ -6,6 +6,7 @@ You can load the index by:
 ```python
 from semir.ir import InvertedIndex
 idx = InvertedIndex('/path/docs-freqs-ngram=2-tokenizer=spacy-filter=all.npz')
+```
 #### Data base:
 We used the Following .db file to store the corpus:  [Coming soon]()
 You can connect to the .db file using sqlite:
