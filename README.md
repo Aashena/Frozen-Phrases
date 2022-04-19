@@ -1,12 +1,12 @@
 # Frozen-Phrases
 Supporting matterial for the paper "Detecting Frozen Phrases in Open-Domain Question Answering"
-###### Index:
+#### Index:
 We used the Following index file to get IDF of each term (for calculating the score of an alignment):  [Coming soon]()
 You can load the index by:
 ```python
 from semir.ir import InvertedIndex
 idx = InvertedIndex('/path/docs-freqs-ngram=2-tokenizer=spacy-filter=all.npz')
-###### Data base:
+#### Data base:
 
 ```
 ## Data Generation
